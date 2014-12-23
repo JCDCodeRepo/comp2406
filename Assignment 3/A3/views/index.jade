@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  - if(error)
+    div.alert-error #{error}
+  p Please log in (Username and Password are Case-Sensitive)
+  div
+    form(action="/login", method="post")
+        div.control-group.input-append
+            input(type="text", name="username")
+            label.add-on(for="username") Username
+        div.control-group.input-append
+            input(type="password", name="password")
+            label.add-on(for="password") Password
+        button(type="submit") Login
+

@@ -1,0 +1,195 @@
+extends layout
+block content
+  b
+    font(size='+3',color='#009900') COMP 2406 Fall 2014
+  br
+  b
+    font(color='#009900')
+    font(size='+3') Assignment Grading
+  b(style='color: rgb(255, 0, 0);')
+    font(size='+3')
+      br
+  hr
+  p
+    b 
+    font(size='4', color='#FF0000') This chart is to help us track when assignment grading is complete. Culearn does not provide an easy way to do this.
+  p
+  hr
+
+  p Logged in as #{username}.
+  table.reference(width='928', border='1', cellpadding='5')
+    tr
+        th(width='45', scope='col')  
+        th(width='208', scope='col') TA
+        th(width='142', scope='col') Start Date
+        th(width='128', scope='col') Deadline
+        th(width='162', scope='col')
+          p
+            | Completion
+            br
+            | Date
+        th(width='155', scope='col') Comment
+      tr
+        th(scope='row') A1
+        td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[0][0][0]}
+        td #{cells[0][0][1]}
+        td #{cells[0][0][2]}
+        td.span(style='color: #00a86b;') #{cells[0][0][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[0][1][0]}
+        td #{cells[0][1][1]}
+        td #{cells[0][1][2]}
+        td.span(style='color: #00a86b;') #{cells[0][1][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[0][2][0]}
+        td #{cells[0][2][1]}
+        td #{cells[0][2][2]}
+        td.span(style='color: #00a86b;') #{cells[0][2][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[0][3][0]}
+        td #{cells[0][3][1]}
+        td #{cells[0][3][2]}
+        td.span(style='color: #00a86b;') #{cells[0][3][3]}
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+            tr
+        th(scope='row') A2
+        td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[1][0][0]}
+        td #{cells[1][0][1]}
+        td #{cells[1][0][2]}
+        td.span(style='color: #00a86b;') #{cells[1][0][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[1][1][0]}
+        td #{cells[1][1][1]}
+        td #{cells[1][1][2]}
+        td.span(style='color: #00a86b;') #{cells[1][1][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[1][2][0]}
+        td #{cells[1][2][1]}
+        td #{cells[1][2][2]}
+        td.span(style='color: #00a86b;') #{cells[1][2][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[1][3][0]}
+        td #{cells[1][3][1]}
+        td #{cells[1][3][2]}
+        td.span(style='color: #00a86b;') #{cells[1][3][3]}
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+      tr
+        th(scope='row') A3
+        td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[2][0][0]}
+        td #{cells[2][0][1]}
+        td #{cells[2][0][2]}
+        td.span(style='color: #00a86b;') #{cells[2][0][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[2][1][0]}
+        td #{cells[2][1][1]}
+        td #{cells[2][1][2]}
+        td.span(style='color: #00a86b;') #{cells[2][1][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[2][2][0]}
+        td #{cells[2][2][1]}
+        td #{cells[2][2][2]}
+        td.span(style='color: #00a86b;') #{cells[2][2][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[2][3][0]}
+        td #{cells[2][3][1]}
+        td #{cells[2][3][2]}
+        td.span(style='color: #00a86b;') #{cells[2][3][3]}
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+      tr
+        th(scope='row') A4
+         td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[3][0][0]}
+        td #{cells[3][0][1]}
+        td #{cells[3][0][2]}
+        td.span(style='color: #00a86b;') #{cells[3][0][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[3][1][0]}
+        td #{cells[3][1][1]}
+        td #{cells[3][1][2]}
+        td.span(style='color: #00a86b;') #{cells[3][1][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[3][2][0]}
+        td #{cells[3][2][1]}
+        td #{cells[3][2][2]}
+        td.span(style='color: #00a86b;') #{cells[3][2][3]}
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[3][3][0]}
+        td #{cells[3][3][1]}
+        td #{cells[3][3][2]}
+        td.span(style='color: #00a86b;') #{cells[3][3][3]}
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+  br
+
+  form(action="/logout", method="post")
+        button(type="submit") Logout
+  h2 Users logged in
+  ul
+    each val, user in loggedInUsers
+      li= user

@@ -1,0 +1,319 @@
+extends layout
+block content
+  b
+    font(size='+3',color='#009900') COMP 2406 Fall 2014
+  br
+  b
+    font(color='#009900')
+    font(size='+3') Assignment Grading
+  b(style='color: rgb(255, 0, 0);')
+    font(size='+3')
+      br
+  hr
+  p Logged in as #{username}.  
+  div
+    form(action="/update", method="post")
+        div.control-group.input-append
+            label.add-on(for="a1",style='padding:7px;') Assignment 1 Completion Date
+            input(type="date", name="a1", style="height:26px")  
+        div.control-group.input-append
+            label.add-on(for="a2",style='padding:7px;') Assignment 2 Completion Date
+            input(type="date", name="a2", style="height:26px")  
+        div.control-group.input-append
+            label.add-on(for="a3",style='padding:7px;') Assignment 3 Completion Date
+            input(type="date", name="a3", style="height:26px")  
+        div.control-group.input-append
+            label.add-on(for="a4",style='padding:7px;') Assignment 4 Completion Date
+            input(type="date", name="a4", style="height:26px")
+        button(type="submit",style='margin-bottom:7px;') Update
+
+  p
+    b 
+    font(size='4', color='#FF0000') This chart is to help us track when assignment grading is complete. Culearn does not provide an easy way to do this.
+  p
+  hr
+  table.reference(width='927', border='1', cellpadding='5')
+    tr
+        th(width='45', scope='col')  
+        th(width='207', scope='col') TA
+        th(width='142', scope='col') Start Date
+        th(width='127', scope='col') Deadline
+        th(width='162', scope='col')
+          p
+            | Completion
+            br
+            | Date
+        th(width='155', scope='col') Comment
+      tr
+        th(scope='row') A1
+        td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[0][0][0]}
+        td #{cells[0][0][1]}
+        td #{cells[0][0][2]}
+        if val, cells[0][0][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[0][0][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[0][0][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[0][1][0]}
+        td #{cells[0][1][1]}
+        td #{cells[0][1][2]}
+        if val, cells[0][1][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[0][1][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[0][1][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[0][2][0]}
+        td #{cells[0][2][1]}
+        td #{cells[0][2][2]}
+        if val, cells[0][2][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[0][2][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[0][2][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[0][3][0]}
+        td #{cells[0][3][1]}
+        td #{cells[0][3][2]}
+        if val, cells[0][3][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[0][3][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[0][3][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+      tr
+        th(scope='row') A2
+        td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[1][0][0]}
+        td #{cells[1][0][1]}
+        td #{cells[1][0][2]}
+        if val, cells[1][0][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[1][0][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[1][0][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[1][1][0]}
+        td #{cells[1][1][1]}
+        td #{cells[1][1][2]}
+        if val, cells[1][1][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[1][1][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[1][1][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[1][2][0]}
+        td #{cells[1][2][1]}
+        td #{cells[1][2][2]}
+        if val, cells[1][2][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[1][2][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[1][2][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[1][3][0]}
+        td #{cells[1][3][1]}
+        td #{cells[1][3][2]}
+        if val, cells[1][3][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[1][3][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[1][3][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+      tr
+        th(scope='row') A3
+        td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[2][0][0]}
+        td #{cells[2][0][1]}
+        td #{cells[2][0][2]}
+        if val, cells[2][0][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[2][0][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[2][0][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[2][1][0]}
+        td #{cells[2][1][1]}
+        td #{cells[2][1][2]}
+        if val, cells[2][1][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[2][1][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[2][1][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[2][2][0]}
+        td #{cells[2][2][1]}
+        td #{cells[2][2][2]}
+        if val, cells[2][2][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[2][2][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[2][2][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[2][3][0]}
+        td #{cells[2][3][1]}
+        td #{cells[2][3][2]}
+        if val, cells[2][3][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[2][3][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[2][3][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+      tr
+        th(scope='row') A4
+         td
+          span.auto-style21(style='font-weight: bold;') Chris
+        td #{cells[3][0][0]}
+        td #{cells[3][0][1]}
+        td #{cells[3][0][2]}
+        if val, cells[3][0][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[3][0][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[3][0][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lucas
+        td #{cells[3][1][0]}
+        td #{cells[3][1][1]}
+        td #{cells[3][1][2]}
+        if val, cells[3][1][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[3][1][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[3][1][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Muhammad
+        td #{cells[3][2][0]}
+        td #{cells[3][2][1]}
+        td #{cells[3][2][2]}
+        if val, cells[3][2][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[3][2][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[3][2][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(scope='row')  
+        td
+          span(style='font-weight: bold;') Lee
+        td #{cells[3][3][0]}
+        td #{cells[3][3][1]}
+        td #{cells[3][3][2]}
+        if val, cells[3][3][3] == "1"
+          td.span(style='color: #00a73b;') ON TIME
+        else if val, cells[3][3][3] == "2"
+          td.span(style='color: #00a73b;') in progress
+        else if val, cells[3][3][3] == "3"
+          td.span(style='color: #ff0000;') late
+        else
+          td
+      tr
+        th(bgcolor='#CCCCCC', scope='row')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+        td(bgcolor='#CCCCCC')  
+      tr
+  br
+
+  form(action="/logout", method="post")
+        button(type="submit") Logout

@@ -1,0 +1,51 @@
+extends layout
+block content
+    h1= songTitle
+    table(style="width:100")
+        tbody
+            tr
+                td(style="width:50%")   Style: 
+                                        =songStyle
+                td(style="width:50%;text-align:right")   Composer:
+                                        =songComposer
+    p
+    p Key:
+        =songKey
+        
+    -var rows = (songBars.length)/2
+    -var currentRow = 0
+    -var checkStars = 0
+    -var checkBars = 0
+    
+    table(style="width:100%")
+        tbody
+        while currentRow < rows
+            if currentRow % 2 == 0
+                tr
+                while checkStars < (checkBars + 4)
+                    td(style="width:25%;text-align:center")
+                        p
+                            if checkStars < rows*2
+                                |#{songBars[checkStars].star}
+                    -checkStars++
+            if currentRow % 1 == 0
+                tr
+                while checkBars < checkStars
+                    td(style="width:25%")
+                        if checkBars < rows*2
+                            span(style="min-width:10%;display:inline-block;text-align:left")
+                                |#{songBars[checkBars].timeSig}
+                            span(style="min-width:20px;display:inline-block;text-align:left")
+                                |#{songBars[checkBars].begLine}
+                            span(style="min-width:20px;display:inline-block;text-align:left")
+                                |#{songBars[checkBars].chords}
+                            span(style="min-width:20px;display:inline-block")
+                                |#{songBars[checkBars].endLine}
+
+                    -checkBars++
+            -currentRow++
+    br
+    br
+    br
+    a(href="/") Go Back to try another search.
+    

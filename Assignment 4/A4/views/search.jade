@@ -1,0 +1,8 @@
+extends layout
+block content
+	h1= title + " Results"
+	a(href="/") Go Back to try another search.
+	ul
+		- each val in songs
+			li
+				a(href="/display/"+val.title) #{val.title}

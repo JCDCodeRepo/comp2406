@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the #{title} server.
+  - if(error)
+    div.alert-error #{error}
+  p Please enter the name (or part of the name) of a song you're looking for:
+  div
+    form(action="/search", method="post")
+        div.control-group.input-append
+            input(type="text", name="songName")
+        button(type="submit") Submit
+    form(name="uploader", action="/fileupload", method="post", enctype="multipart/form-data")
+            input(type="file", name="file", id="file")
+            input(type="submit", value="Upload") 
+  p #{up}
