@@ -1,5 +1,3 @@
-The Assignment itself has been handed in in Michael Tran's cuLearn.
-
 COMP2406 - Assignment 4
 
 Created by:
